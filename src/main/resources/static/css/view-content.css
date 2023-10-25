@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+.header-page{
+    width:100%;
+    background-color: aqua;
+    height: 40px;
+}
+.user-list-choice{
+    display: flex;
+    position:absolute;
+    right: 10px;
+
+}
+.header-page > span{
+    margin-top: 20px;
+
+}
+.header-page >p{
+    padding-top: 10px;
+    position: absolute;
+    margin-left: 10px;
+}
+.show-user{
+    position: absolute;
+    margin-top: 40px;
+    right: 10px;
+}
+.show-user >p{
+    border: 1px solid black;
+    padding: 3px 20px;
+}
+hr{
+    top:40px;
+}
+.form-body{
+    display: flex;
+    height: 95%;
+}
+.list-menu{
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+}
+.list-menu p{
+    margin-left: 10px;
+    height: 30px;
+    margin-top: 10px;
+}
+.input-search{
+    display: inline-block;
+    height: 25px;
+    width: 170px;
+    border: none;
+}
+.list-menu>p{
+    margin-top: 10px;
+    height: 30px;
+}
+.search-box{
+    border: 2px solid black;
+    margin-top: 15px;
+    margin-bottom:15px;
+    width: 200px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+.search-box button{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 2px 7px;
+    margin: 0;
+}
+.form-edit-profile{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.form-edit {
+    border: 1px solid black;
+    margin-top: 20px;
+
+    width: 1100px;
+    height: 80%;
+}
+.form-edit>p{
+    font-size: 20px;
+    background-color: aqua;
+    padding-left: 0;
+
+}
+.input-edit{
+    display: block;
+}
+.form-edit-profile>p{
+    font-size: 35px;
+}
+.form{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.form label{
+    display: block;
+    margin-top: 5px;
+}
+.form input{
+    margin-top: 10px;
+    width: 800px;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 25px;
+}
+.form textarea{
+    height: 60px;
+    width: 800px;
+    margin-top: 10px;
+}
+button{
+    margin-top: 30px;
+    padding: 4px 8px;
+}
+#content{
+    height: 150px;
+}
+.list-content{
+    min-width: 1050px;
+    max-width: 1200px;
+}
+.form table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+.list-content tr{
+    display: grid;
+    grid-template-columns: 3% 22% 55% 20% ;
+    grid-template-rows: auto auto auto auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blue;
+    background-color: white;
+}
+#form-search{
+    position: relative;
+    height: 25px;
+    width: 200px;
+    border: none;
+}

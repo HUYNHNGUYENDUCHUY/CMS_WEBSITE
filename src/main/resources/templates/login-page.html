@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/login-page.css">
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js}" ></script>
+    <script th:src="@{/js/validate.js}"></script>
+
+
+</head>
+<body>
+<div style="background-color:rgb(58, 54, 54); height:100%;">
+    <div class="container">
+            <div class="container-box ">
+                <div class="header-login">
+                    <p>Member Login </p>
+                </div>
+                <div class="form-login">
+                    <form th:action="@{/member/login} " method="post" th:object="${member}" id="login-form">
+
+                    <input  class="input-user-name" type="text" name="username" th:field="*{username}" placeholder="   User Name">
+                        <span class="has-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+                    <input class="input-password" type="text" name="password" th:field="*{password}" placeholder="    Password">
+                        <span class="has-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    <input type="checkbox" name="rememberMe" class="remember-box"><span>    Remember Me</span>
+                    <button class="button-login" id="button-login" name="login" type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="footer-form-login">
+                    <a class="forgot-password" th:href="@{/member/register}" methods="get">Click here to register </a>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

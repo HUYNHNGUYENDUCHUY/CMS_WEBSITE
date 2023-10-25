@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/form-content.css">
+</head>
+<body>
+<div class="container">
+    <div class="header-page" th:replace="edit-profile::header-page">
+        </div>
+    <hr>
+    <div class="form-body" >
+        <div class="list-menu" >
+            <div class="search-box">
+                <form>
+                <input type="text" class="input-search" name="search-content" placeholder="  Search">
+                <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                </button>
+                </form>
+            </div>
+            <div th:replace="edit-profile::list-choice">
+            </div>
+        </div>
+        <div class="form-edit-profile">
+            <p> Add Content</p>
+            <hr>
+            <div class="form-edit">
+                <p>Content From Elements</p>
+                <hr>
+                <div class="form">
+                    <th:block th:object="${check}">
+                    <form method="post" th:action= "@{${check == null ? '/content/create ': '/content/edit'} }"
+                          th:object="${contents}">
+                        <input type="hidden" th:field="*{id}">
+                    <label for="title">Title</label>
+                    <input type="text" class="input-edit" id="title" th:field="*{title}" th:name="title" placeholder="   Enter the title">
+                    <label for="brief">Brief</label>
+                    <textarea type="text" class="input-edit" id="brief" th:field="*{brief}" th:name="brief"></textarea>
+                    <label for="content">Content</label>
+                    <textarea type="text" class="input-edit" id="content" th:field="*{content}" th:name="content"></textarea>
+                    <button type="submit"> Submit Button</button>
+                        <button th:href="@{#}"> Reset Button</button>
+
+                    </form>
+
+                    </th:block>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

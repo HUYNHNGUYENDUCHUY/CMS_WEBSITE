@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.container-box{
+    border: 1px solid black;
+    height: auto;
+    width: 350px;
+    background-color: white;
+}
+.header-register{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400 !important;
+
+}
+.input-user-name,.input-password,.input-email,.input-re-password{
+    display: block;
+    height: 30px;
+    width: 250px;
+    border: 1px solid  rgb(228, 228, 228);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 40px;
+
+}
+.button-register{
+    display: block;
+    margin-top: 22px;
+    width: 250px;
+    height: 30px;
+    margin-left: 40px;
+    background-color: rgb(0, 206, 129);
+    color:aliceblue;
+    font-size: 15px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 5px;
+}
+.footer-form-register{
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(236, 240, 241);
+    height: 40px;
+}
+.to-login{
+    display: block;
+    padding-top: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 130px;
+}
+.form-register p{
+    color: red;
+    text-align: center;
+}
+.has-error{
+    color: red;
+    margin-left: 40px;
+}

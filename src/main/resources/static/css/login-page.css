@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.container-box{
+    border: 1px solid black;
+    height: auto;
+    width: 350px;
+    background-color: white;
+}
+.header-login{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400 !important;
+
+}
+.input-user-name,.input-password{
+    display: block;
+    height: 30px;
+    width: 250px;
+    border: 1px solid  rgb(228, 228, 228);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 40px;
+
+}
+.button-login{
+    display: block;
+    margin-top: 20px;
+    width: 250px;
+    height: 30px;
+    margin-left: 40px;
+    background-color: rgb(0, 206, 129);
+    color:aliceblue;
+    font-size: 15px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 5px;
+}
+.footer-form-login{
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(236, 240, 241);
+    height: 40px;
+}
+.forgot-password{
+    display: block;
+    padding-top: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 130px;
+}
+.remember-box{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.form-login p{
+    color: red;
+    text-align: center;
+}
+.error{
+    display: block;
+    color: red;
+    margin-left: 40px;
+}
+.has-error{
+    color: red;
+    margin-left: 40px;
+}

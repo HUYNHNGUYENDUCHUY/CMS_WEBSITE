@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/register-page.css">
+</head>
+<body>
+<div style="background-color:rgb(58, 54, 54); height:100%;">
+    <div class="container">
+            <div class="container-box ">
+                <div class="header-register">
+                    <p> Register </p>
+                </div>
+                <div class="form-register" id="form-register">
+                    <form th:action="@{/member/register}" method="post" th:object="${members}">
+                    <input class="input-user-name" type="text" name="username" th:field="*{username}" placeholder="   User Name">
+                            <span class="has-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+                    <input class="input-email" type="text" name="email" th:field="*{email}"  placeholder="   Email">
+                        <span class="has-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                    <input class="input-password" type="text" name="password" th:field="*{password}"  placeholder="    Password">
+                        <span class="has-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    <input class="input-re-password" type="text" name="rePassword"  placeholder="    Re Password">
+                        <span class="has-error" th:if="${#fields.hasErrors('rePassword')}" th:errors="*{rePassword}"></span>
+                    <button class="button-register" name="register" value="">Register</button>
+                    </form>
+                </div>
+
+                <div class="footer-form-register">
+                    <a class="to-login" th:href="@{/member/login}" methods="get" >Click here to Login </a>
+                </div>
+            </div>
+    </div>
+</div>
+
+</body>
+</html>
